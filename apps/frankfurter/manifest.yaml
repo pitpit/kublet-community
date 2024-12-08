@@ -1,0 +1,14 @@
+summary: Frankfurter Forex
+desc: https://frankfurter.dev/ is a free, open-source API for current and historical foreign exchange rates. It is based on data sets published by the European Central Bank.
+author: Damien Pitard
+configs:
+  - id: base_currency
+  name: The base currency
+  type: dropdown_search
+  # see https://api.frankfurter.app/currencies
+  ddData: AUD,BGN,BRL,CAD,CHF,CNY,CZK,DKK,EUR,GBP,HKD,HUF,IDR,ILS,INR,ISK,JPY,KRW,MXN,MYR,NOK,NZD,PHP,PLN,RON,SEK,SGD,THB,TRY,USD,ZAR
+  - id: target_currency
+  name: The target currency
+  type: dropdown_search
+  # see https://api.frankfurter.app/currencies
+  ddData: AUD,BGN,BRL,CAD,CHF,CNY,CZK,DKK,EUR,GBP,HKD,HUF,IDR,ILS,INR,ISK,JPY,KRW,MXN,MYR,NOK,NZD,PHP,PLN,RON,SEK,SGD,THB,TRY,USD,ZAR
