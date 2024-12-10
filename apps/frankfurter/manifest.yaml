@@ -3,12 +3,16 @@ desc: https://frankfurter.dev/ is a free, open-source API for current and histor
 author: Damien Pitard
 configs:
   - id: base_currency
-  name: The base currency
+  name: The base currency (default: EUR)
   type: dropdown_search
   # see https://api.frankfurter.app/currencies
   ddData: AUD,BGN,BRL,CAD,CHF,CNY,CZK,DKK,EUR,GBP,HKD,HUF,IDR,ILS,INR,ISK,JPY,KRW,MXN,MYR,NOK,NZD,PHP,PLN,RON,SEK,SGD,THB,TRY,USD,ZAR
   - id: target_currency
-  name: The target currency
+  name: The target currency (default: USD)
   type: dropdown_search
   # see https://api.frankfurter.app/currencies
   ddData: AUD,BGN,BRL,CAD,CHF,CNY,CZK,DKK,EUR,GBP,HKD,HUF,IDR,ILS,INR,ISK,JPY,KRW,MXN,MYR,NOK,NZD,PHP,PLN,RON,SEK,SGD,THB,TRY,USD,ZAR
+  - id: since
+  name: Since when to retrieve the exchange rates in days (default: 7d)
+  type: dropdown_search
+  ddData: 30d,90d,180d,365d
