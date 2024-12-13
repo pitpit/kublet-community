@@ -123,13 +123,15 @@ void loop() {
 
       std::vector<float> arr = {};
       String lastValue;
-      for (int i = sinceDays;  i >  0; i--) {
-        String date = daysAgo(time, i);
 
+      for (JsonObject::iterator it = json["rates"].as<JsonObject>().begin(); it != json["rates"].as<JsonObject>().end(); ++it) {
+        String date = it->key().c_str();
         if (json["rates"][date][targetCurrency].is<float>()) {
           lastValue = json["rates"][date][targetCurrency].as<String>();
+          Serial.println(date + ": " + lastValue);
           arr.push_back(lastValue.toFloat());
         } else {
+          Serial.println(date + ": " + lastValue);
           arr.push_back(lastValue.toFloat());
         }
       }
